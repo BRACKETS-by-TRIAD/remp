@@ -134,6 +134,11 @@ class CampaignController extends Controller
         ]);
     }
 
+    public function validateForm(CampaignRequest $request, Campaign $campaign)
+    {
+        //
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -297,7 +302,7 @@ class CampaignController extends Controller
         $newScheduleStartTime = null,
         $newScheduleEndTime = null
     ): ?string {
-    
+
         if ($activationMode === 'activate-schedule'
             && !is_null($newScheduleStartTime)) {
             $schedule = new Schedule();
